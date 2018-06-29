@@ -1,6 +1,6 @@
 export default [
   {
-    groupName: 'Basic questions',
+    title: 'Basic questions',
     questions: [
       {
         title: 'What is your name?',
@@ -27,7 +27,7 @@ export default [
     ]
   },
   {
-    groupName: 'Food questions',
+    title: 'Food questions',
     questions: [
       {
         title: 'What is your favorite pasta?',
