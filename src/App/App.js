@@ -8,7 +8,7 @@ class App extends Component {
     const questionGroup = questionGroups[0];
 
     return (
-      <div className="App">
+      <div className='App'>
         <QuestionGroup
           title={questionGroup.title}
           questions={questionGroup.questions}

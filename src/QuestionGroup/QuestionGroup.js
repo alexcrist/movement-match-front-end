@@ -9,6 +9,7 @@ export default class QuestionGroup extends React.Component {
       return (
         <Question
           key={index}
+          index={index + 1}
           title={question.title}
           answers={question.answers}
         />
@@ -18,7 +19,9 @@ export default class QuestionGroup extends React.Component {
     return (
       <div className='QuestionGroup'>
         <div className='QuestionGroup-header'>
-          {this.props.title}
+          <div className='QuestionGroup-title'>
+            {this.props.title}
+          </div>
         </div>
         <div className='QuestionGroup-questions'>
           {questions}

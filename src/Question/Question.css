@@ -1,11 +1,12 @@
 .Question {
-
+  margin-bottom: 96px;
 }
 
 .Question-title {
-
+  font-size: 18px;;
+  font-weight: 700;
+  margin-bottom: 12px;
 }
 
 .Question-answers {
-
 }

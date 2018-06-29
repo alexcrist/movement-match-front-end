@@ -5,9 +5,16 @@ export default class Answer extends React.Component {
   render() {
     return (
       <div className='Answer'>
-        <div className='Answer-title'>
+        <input
+          type='radio'
+          id={this.props.title}
+          name={this.props.group}
+        />
+        <label
+          className='Answer-title'
+          htmlFor={this.props.title}>
           {this.props.title}
-        </div>
+        </label>
       </div>
     );
   }

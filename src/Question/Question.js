@@ -10,6 +10,7 @@ export default class Question extends React.Component {
         <Answer
           key={index}
           title={answer.title}
+          group={this.props.title}
         />
       );
     });
@@ -17,7 +18,7 @@ export default class Question extends React.Component {
     return (
       <div className='Question'>
         <div className='Question-title'>
-          {this.props.index} {this.props.title}
+          {this.props.index}. {this.props.title}
         </div>
         <div className='Question-answers'>
           {answers}
