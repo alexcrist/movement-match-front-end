@@ -1,5 +1,6 @@
 import React from 'react';
 import _ from 'lodash';
+import FontAwesome from 'react-fontawesome';
 import Question from '../Question/Question.js';
 import './QuestionGroup.css'
 
@@ -21,6 +22,7 @@ export default class QuestionGroup extends React.Component {
       <div className='QuestionGroup'>
         <div className='QuestionGroup-header'>
           <h2 className='QuestionGroup-title'>
+            <FontAwesome className='QuestionGroup-icon' name={this.props.icon} />
             {this.props.title}
           </h2>
         </div>

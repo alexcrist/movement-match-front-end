@@ -11,15 +11,13 @@
   font-size: 32px;
   line-height: 32px;
   background-color: #BDD9BF;
-  padding-left: calc(50% - 350px);
-  padding-right: calc(50% - 350px);
   padding-top: 12px;
+  padding-left: 18px;
   padding-bottom: 12px;
   display: inline-block;
   vertical-align: top;
   border-radius: 0 0 4px 0;
-  width: 632px;
-  padding-left: 12px;
+  width: 626px;
 }
 
 .Quiz-logo-container {

@@ -14,6 +14,7 @@ class Quiz extends React.Component {
           key={index}
           title={questionGroup.title}
           questions={questionGroup.questions}
+          icon={questionGroup.icon}
         />
       );
     });

@@ -1,6 +1,7 @@
 export default [
   {
     title: 'Basic questions',
+    icon: 'building',
     questions: [
       {
         title: 'What is your name?',
@@ -28,6 +29,7 @@ export default [
   },
   {
     title: 'Food questions',
+    icon: 'rocket',
     questions: [
       {
         title: 'What is your favorite pasta?',
