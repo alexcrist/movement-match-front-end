@@ -41,7 +41,8 @@ export default [
         ]
       },
       {
-        title: 'What is your favorite ice cream flavor?',
+        title: 'Which icecream flavors do you like?',
+        multipleChoice: true,
         answers: [
           {
             title: 'vanilla'

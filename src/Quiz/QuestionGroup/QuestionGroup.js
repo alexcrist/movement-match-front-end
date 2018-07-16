@@ -12,6 +12,7 @@ export default class QuestionGroup extends React.Component {
           index={index + 1}
           title={question.title}
           answers={question.answers}
+          multipleChoice={question.multipleChoice}
         />
       );
     });
@@ -19,9 +20,9 @@ export default class QuestionGroup extends React.Component {
     return (
       <div className='QuestionGroup'>
         <div className='QuestionGroup-header'>
-          <div className='QuestionGroup-title'>
+          <h2 className='QuestionGroup-title'>
             {this.props.title}
-          </div>
+          </h2>
         </div>
         <div className='QuestionGroup-questions'>
           {questions}

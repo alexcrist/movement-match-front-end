@@ -1,21 +1,28 @@
 .QuestionGroup {
-
-}
-
-.QuestionGroup-header {
-  
+  margin-top: 48px;
 }
 
 .QuestionGroup-title {
   font-size: 24px;
-  line-height: 100px;
-  max-width: 800px;
-  padding: 0 50px;
-  margin: auto;
+  background-color: #111d4a;
+  color: #fff8f0;
+  padding: 8px 0 8px 40px;
+  border-radius: 4px 4px 4px 0;
+}
+
+.QuestionGroup-questions::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  border-radius: 0 0 3px 3px;
+  border: 3px solid #111d4a;
+  display: inline-block;
 }
 
 .QuestionGroup-questions {
-  max-width: 800px;
-  padding: 50px;
-  margin: auto;
+  position: relative;
+  padding-left: 40px;
+  padding-top: 36px;
 }

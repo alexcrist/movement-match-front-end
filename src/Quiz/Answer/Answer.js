@@ -3,10 +3,11 @@ import './Answer.css';
 
 export default class Answer extends React.Component {
   render() {
+    const type = this.props.multipleChoice ? 'checkbox' : 'radio';
     return (
       <div className='Answer'>
         <input
-          type='radio'
+          type={type}
           id={this.props.title}
           name={this.props.group}
         />

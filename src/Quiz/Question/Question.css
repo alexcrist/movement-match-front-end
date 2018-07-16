@@ -1,9 +1,13 @@
-.Question {
-  margin-bottom: 96px;
+.Question:not(:last-child) {
+  margin-bottom: 36px;
+}
+
+.Question:last-child {
+  padding-bottom: 26px;
 }
 
 .Question-title {
-  font-size: 18px;;
+  font-size: 18px;
   font-weight: 700;
   margin-bottom: 12px;
 }

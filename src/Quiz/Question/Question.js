@@ -5,12 +5,14 @@ import './Question.css';
 
 export default class Question extends React.Component {
   render() {
+    console.log('this.props.multipleChoice', this.props.multipleChoice);
     const answers = _.map(this.props.answers, (answer, index) => {
       return (
         <Answer
           key={index}
           title={answer.title}
           group={this.props.title}
+          multipleChoice={this.props.multipleChoice}
         />
       );
     });
