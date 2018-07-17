@@ -9,6 +9,7 @@
   height: 200px;
   margin: auto;
   margin-top: 12px;
+  box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
 }
 
 .Home-logo {
@@ -30,6 +31,7 @@
   text-align: center;
   background-color: #2AB7CA;
   padding: 24px 12px;
+  box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
 }
 
 .Home-description {
