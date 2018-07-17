@@ -1,7 +1,7 @@
 {
-  "name": "surveyer",
+  "name": "movement-match-front-end",
   "version": "0.1.0",
-  "homepage" : "http://alexcrit.github.io/surveyer",
+  "homepage" : "http://alexcrit.github.io/movement-match-front-end",
   "dependencies": {
     "gh-pages": "^1.2.0",
     "immutability-helper": "^2.7.1",
@@ -16,6 +16,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "eject": "react-scripts eject",
-    "publish": "npm run build && gh-pages -d build"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   }
 }
