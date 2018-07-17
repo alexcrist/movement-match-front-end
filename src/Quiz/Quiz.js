@@ -1,6 +1,6 @@
 import React from 'react';
 import _ from 'lodash';
-import { Link } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 import update from 'immutability-helper';
 import QuestionGroup from './QuestionGroup/QuestionGroup.js';
 import questionGroups from '../data/mockQuestions.js';
@@ -18,18 +18,30 @@ const colors = [
 class Quiz extends React.Component {
   constructor(props) {
     super(props);
-    const answerGroups = _.cloneDeep(questionGroups);
-    this.state = { answerGroups };
+    this.fetchQuestionGroups = this.fetchQuestionGroups.bind(this);
     this.setAnswer = this.setAnswer.bind(this);
     this.onFinish = this.onFinish.bind(this);
+    
+    this.state = {
+      finishButtonText: 'Finish',
+      redirectToResults: false
+    };
+    this.fetchQuestionGroups();
+  }
+
+  fetchQuestionGroups() {
+    // TODO: fetch question groups from back end
+    setTimeout(() => {
+      this.setState({ questionGroups });
+    }, 250);
   }
 
   setAnswer(groupIndex, questionIndex, answerIndex, multipleChoice) {
-    let answer;
-
+    let answer
+    
     if (multipleChoice) {
       answer = this.state
-        .answerGroups[groupIndex]
+        .questionGroups[groupIndex]
         .questions[questionIndex]
         .answer || [];
 
@@ -43,9 +55,8 @@ class Quiz extends React.Component {
       answer = [answerIndex];
     }
 
-    console.log('answer', answer);
 
-    const answerGroups = update(this.state.answerGroups, {
+    const questionGroups = update(this.state.questionGroups, {
       [groupIndex]: {
         questions: {
           [questionIndex]: {
@@ -56,15 +67,27 @@ class Quiz extends React.Component {
         }
       }
     });
-    this.setState({ answerGroups });
+    this.setState({ questionGroups });
   }
 
   onFinish() {
-    console.log('answerGroups', this.state.answerGroups);
+    this.setState({ finishButtonText: 'Processing...' });
+
+    // TODO: process results on back end
+    console.log(this.state.questionGroups);
+    setTimeout(() => {
+      const results = [];
+      this.props.setResults(results);
+      this.setState({ redirectToResults: true });
+    }, 250);
   }
 
   render() {
-    const content = _.map(questionGroups, (questionGroup, index) => {
+    if (this.state.redirectToResults) {
+      return <Redirect to='/results' />;
+    }
+
+    const content = _.map(this.state.questionGroups, (questionGroup, index) => {
       const color = colors[index % colors.length];
       return (
         <QuestionGroup
@@ -92,7 +115,7 @@ class Quiz extends React.Component {
         <div className='Quiz-body'>
           {content}
           <button className='Quiz-finish' onClick={this.onFinish}>
-            Finish
+            {this.state.finishButtonText}
           </button>
         </div>
       </div>

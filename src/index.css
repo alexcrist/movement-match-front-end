@@ -44,7 +44,7 @@ button {
     top: 0;
     width: 18px;
     height: 18px;
-    border: 1px solid #1e1e24;
+    border: 1px solid #333;
     border-radius: 100%;
 }
 
@@ -53,7 +53,7 @@ button {
     content: '';
     width: 12px;
     height: 12px;
-    background: #1e1e24;
+    background: #333;
     position: absolute;
     top: 4px;
     left: 4px;
@@ -95,7 +95,7 @@ button {
     top: 0;
     width: 18px;
     height: 18px;
-    border: 1px solid #1e1e24;
+    border: 1px solid #333;
 }
 
 [type="checkbox"]:checked + label:after,
@@ -103,7 +103,7 @@ button {
     content: '';
     width: 12px;
     height: 12px;
-    background: #1e1e24;
+    background: #333;
     position: absolute;
     top: 4px;
     left: 4px;

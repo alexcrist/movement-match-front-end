@@ -8,6 +8,12 @@ const description2 = 'Sed ut perspiciatis unde omnis iste natus error sit volupt
 
 class Home extends React.Component {
   render() {
+    console.log(localStorage.getItem('results'));
+
+    const resultsButton = localStorage.getItem('results') !== null && (
+      <Link className='Home-link-results' to='/results'>Results</Link>
+    );
+
     return (
       <div className='Home'>
         <div className='Home-header'>
@@ -16,7 +22,8 @@ class Home extends React.Component {
         <h1 className='Home-title'>Movement Match</h1>
         <div className='Home-description'>{description1}</div>
         <div className='Home-description'>{description2}</div>
-        <Link className='Home-link' to="/quiz">Take the Quiz</Link>
+        <Link className='Home-link-quiz' to='/quiz'>Take the Quiz</Link>
+        {resultsButton}
       </div>
     );
   }

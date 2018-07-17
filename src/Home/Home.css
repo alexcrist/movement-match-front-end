@@ -1,5 +1,6 @@
 .Home {
   text-align: center;
+  margin-bottom: 36px;
 }
 
 .Home-header {
@@ -43,11 +44,11 @@
   margin: 0 auto 24px auto;
 }
 
-.Home-link {
+.Home-link-quiz {
   text-decoration: none;
   background-color: #FE4A49;
   color: #f5f5f5;
-  padding: 12px;
+  padding: 8px;
   font-size: 24px;
   display: block;
   max-width: 300px;
@@ -56,6 +57,20 @@
   text-align: center;
 }
 
-.Home-link:hover {
+.Home-link-results {
+  text-decoration: none;
+  background-color: #111d4a;
+  color: #f5f5f5;
+  padding: 8px;
+  font-size: 24px;
+  display: block;
+  max-width: 300px;
+  margin: 12px auto 0;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.Home-link-quiz:hover,
+.Home-link-resuts:hover {
   opacity: 0.8;
 }
