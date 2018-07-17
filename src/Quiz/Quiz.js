@@ -1,17 +1,20 @@
 import React from 'react';
 import _ from 'lodash';
-import { Link, Redirect } from 'react-router-dom';
+import { Redirect } from 'react-router-dom';
 import update from 'immutability-helper';
 import QuestionGroup from './QuestionGroup/QuestionGroup.js';
 import questionGroups from '../data/mockQuestions.js';
 import './Quiz.css';
 
 const colors = [
-  '#111d4a',
-  '#730071',
-  '#CD5334',
-  '#76AF24',
-  '#0F5199'
+  '#311b92',
+  '#1a237e',
+  '#0d47a1',
+  '#01579b',
+  '#006064',
+  '#004d40',
+  '#1b5e20',
+  '#33691e'
 ];
 
 class Quiz extends React.Component {
@@ -22,7 +25,7 @@ class Quiz extends React.Component {
     this.onFinish = this.onFinish.bind(this);
     
     this.state = {
-      finishButtonText: 'Finish',
+      finishButtonText: 'Process Results',
       redirectToResults: false
     };
     this.fetchQuestionGroups();
@@ -102,7 +105,7 @@ class Quiz extends React.Component {
     return (
       <div className='Quiz'>
         <div className='Quiz-header'>
-          <h1 className='Quiz-title'>Movement Match Quiz</h1>
+          <h1 className='Quiz-title'>Movement Match: Quiz</h1>
         </div>
         <div className='Quiz-body'>
           {content}

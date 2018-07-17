@@ -2,7 +2,6 @@ export default [
   {
     groupId: 0,
     title: 'Basic questions',
-    icon: 'building',
     questions: [
       {
         questionId: 0,
@@ -37,7 +36,6 @@ export default [
   {
     groupId: 1,
     title: 'Food questions',
-    icon: 'rocket',
     questions: [
       {
         questionId: 2,
