@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import logo from '../assets/logo36.svg';
 import './Results.css';
 
 class Results extends React.Component {
@@ -14,13 +13,6 @@ class Results extends React.Component {
     return (
       <div className='Results'>
         <div className='Results-header'>
-          <Link to='/' className='Results-logo-container'>
-            <img 
-              className='Results-logo'
-              src={logo}
-              alt='Movement Match logo'
-            />
-          </Link>
           <h1 className='Results-title'>Movement Match Results</h1>
         </div>
         <div className='Results-body'>

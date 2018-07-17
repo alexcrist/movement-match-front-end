@@ -4,7 +4,6 @@ import { Link, Redirect } from 'react-router-dom';
 import update from 'immutability-helper';
 import QuestionGroup from './QuestionGroup/QuestionGroup.js';
 import questionGroups from '../data/mockQuestions.js';
-import logo from '../assets/logo36.svg';
 import './Quiz.css';
 
 const colors = [
@@ -103,13 +102,6 @@ class Quiz extends React.Component {
     return (
       <div className='Quiz'>
         <div className='Quiz-header'>
-          <Link to='/' className='Quiz-logo-container'>
-            <img 
-              className='Quiz-logo'
-              src={logo}
-              alt='Movement Match logo'
-            />
-          </Link>
           <h1 className='Quiz-title'>Movement Match Quiz</h1>
         </div>
         <div className='Quiz-body'>

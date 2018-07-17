@@ -4,6 +4,7 @@ import { BrowserRouter, Route } from 'react-router-dom';
 import Home from './Home/Home.js';
 import Quiz from './Quiz/Quiz.js';
 import Results from './Results/Results.js';
+import Contributors from './Contributors/Contributors.js';
 import './index.css';
 
 class Router extends React.Component {
@@ -27,6 +28,7 @@ class Router extends React.Component {
           <Route exact path='/' component={Home}/>
           <Route path='/quiz' render={QuizWithProps}/>
           <Route path='/results' render={ResultsWithProps}/>
+          <Route path='/contributors' component={Contributors}/>
         </div>
       </BrowserRouter>
     );
