@@ -22,7 +22,7 @@ class Router extends React.Component {
     const QuizWithProps = () => <Quiz setResults={this.setResults}/>;
     const ResultsWithProps = () => <Results results={this.state.results}/>;
     return (
-      <BrowserRouter>
+      <BrowserRouter basename={process.env.PUBLIC_URL}>
         <div>
           <Route exact path='/' component={Home}/>
           <Route path='/quiz' render={QuizWithProps}/>
