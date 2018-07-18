@@ -87,7 +87,7 @@ Currently all the back end interactions are mocked out. The front end expects al
 The front end expects that it will recieve a **QuestionGroup** JSON array with the following schema:
 
 ```
-Array of QuestionGroups
+Array of QuestionGroups:
 
 [
     {
@@ -116,14 +116,14 @@ An example of a **QuestionGroup** array can be found [here](./src/data/mockQuest
 
 ### Processing the users's answers
 
-When the user completes the quiz, they post an array of **AnswerGroups** back to the sever. An **AnswerGroup** is identical to a **QuestionGroup** except that there is an additional field `answer` on each question whose value is an array of the indices of the chosen answers.
+When the user completes the quiz, they post an array of **AnswerGroups** back to the server. An **AnswerGroup** is identical to a **QuestionGroup** except that there is an additional field `answer` on each **Question** whose value is an array of the indices of the chosen **Answers**.
 
 An example of an **AnswerGroup** array can be found [here](./src/data/mockAnswers.js).
 
-After posting to the back end, the front end will expect a JSON array of **Results** where each **Result** represents an activist movement as a response from the back end with the following schema:
+After posting to the back end, the front end will expect a JSON array of **Results** as a response from the back end where each **Result** represents an activist movement. Below is the schema for the array of **Results**:
 
 ```
-Array of Results
+Array of Results:
 
 [
     {
