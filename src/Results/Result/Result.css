@@ -1,0 +1,47 @@
+.Result {
+  margin-top: 36px;
+  box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
+  border-radius: 2px;
+}
+
+.Result-title {
+  font-size: 28px;
+  color: #f5f5f5;
+  padding: 8px 0 8px 36px;
+  background: #1e1e24;
+  border-radius: 2px 2px 0 0;
+}
+
+.Result-body {
+  padding: 24px 36px 0;
+}
+
+.Result-link {
+  margin-right: 18px;
+  margin-bottom: 24px;
+}
+
+.Result-link h3 {
+  font-size: 28px;
+  line-height: 28px;
+}
+
+.Result-link-website {
+  background-color: #ab47bc;
+}
+
+.Result-link-donate {
+  background-color: #790e8b;
+}
+
+.Result-description {
+  padding-bottom: 24px;
+  font-size: 20px;
+  line-height: 32px;
+}
+
+.Result-image {
+  width: 100%;
+  margin-bottom: 24px;
+  box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
+}

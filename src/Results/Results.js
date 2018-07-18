@@ -1,24 +1,25 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import _ from 'lodash';
+import Result from './Result/Result.js';
 import './Results.css';
 
 class Results extends React.Component {
   constructor(props) {
     super(props);
-    this.results = props.results || localStorage.getItem('results');
-    localStorage.setItem('results', this.results);
+    props.setSubtitle(': Results');
+    const cachedResults = JSON.parse(localStorage.getItem('results'));
+    this.results = props.results === undefined ? cachedResults : props.results;
   }
 
   render() {
+    const results = _.map(this.results, (result, index) => {
+      return <Result key={index} {...result} />;
+    });
+
     return (
       <div className='Results'>
-        <div className='Results-header'>
-          <h1 className='Results-title'>Movement Match Results</h1>
-        </div>
         <div className='Results-body'>
-          <div>TODO: Format results</div>
-          <div>Results: {this.results}</div>
-          <div>TODO: 'Share the quiz' buttons goes here</div>
+          {results}
         </div>
       </div>
     );

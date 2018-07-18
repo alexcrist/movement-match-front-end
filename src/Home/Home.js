@@ -7,16 +7,18 @@ const text2 = 'People are imperfect. Organizations are imperfect. Movements are 
 const text3 = 'Fired up for justice? Here\'s something you can do. Take the quiz to be matched with activist movements that algin with your passions and location.';
 
 class Home extends React.Component {
+  constructor(props) {
+    super(props);
+    props.setSubtitle('');
+  }
+
   render() {
     const resultsButton = localStorage.getItem('results') !== null && (
-      <Link className='Home-link Home-link-results' to='/results'>Results</Link>
+      <Link className='button Home-link Home-link-results' to='/results'>Results</Link>
     );
 
     return (
       <div className='Home'>
-        <div className='Home-header'>
-          <h1 className='Home-title'>Movement Match</h1>
-        </div>
         <div className='Home-body'>
           <h2 className='Home-subtitle'>Mission</h2>
           <div className='Home-description'>{text1}</div>
@@ -24,17 +26,10 @@ class Home extends React.Component {
           <div className='Home-description'>{text2}</div>
           <h2 className='Home-subtitle'>Action</h2>
           <div className='Home-description'>{text3}</div>
-          <Link className='Home-link Home-link-quiz' to='/quiz'>
+          <Link className='button Home-link Home-link-quiz' to='/quiz'>
             Take the Quiz
           </Link>
           {resultsButton}
-        </div>
-        <div className='Home-footer'>
-          <div className='Home-footer-items'>
-            <Link className='Home-footer-item' to='/contributors'>
-              Contributors
-            </Link>
-          </div>
         </div>
       </div>
     );

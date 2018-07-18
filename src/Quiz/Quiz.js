@@ -4,6 +4,7 @@ import { Redirect } from 'react-router-dom';
 import update from 'immutability-helper';
 import QuestionGroup from './QuestionGroup/QuestionGroup.js';
 import questionGroups from '../data/mockQuestions.js';
+import results from '../data/mockResults.js';
 import './Quiz.css';
 
 const colors = [
@@ -24,6 +25,7 @@ class Quiz extends React.Component {
     this.setAnswer = this.setAnswer.bind(this);
     this.onFinish = this.onFinish.bind(this);
     
+    props.setSubtitle(': Quiz');
     this.state = {
       finishButtonText: 'Process Results',
       redirectToResults: false
@@ -76,9 +78,7 @@ class Quiz extends React.Component {
     this.setState({ finishButtonText: 'Processing...' });
 
     // TODO: process results on back end
-    console.log(this.state.questionGroups);
     setTimeout(() => {
-      const results = [];
       this.props.setResults(results);
       this.setState({ redirectToResults: true });
     }, 250);
@@ -88,6 +88,10 @@ class Quiz extends React.Component {
     if (this.state.redirectToResults) {
       return <Redirect to='/results' />;
     }
+
+    const loading = !this.state.questionGroups && (
+      <div className='Quiz-loading'>Fetching questions...</div>
+    );
 
     const content = _.map(this.state.questionGroups, (questionGroup, index) => {
       const color = colors[index % colors.length];
@@ -102,17 +106,17 @@ class Quiz extends React.Component {
       );
     });
 
+    const finish = this.state.questionGroups && (
+      <button className='Quiz-finish button' onClick={this.onFinish}>
+        {this.state.finishButtonText}
+      </button>
+    );
+
     return (
       <div className='Quiz'>
-        <div className='Quiz-header'>
-          <h1 className='Quiz-title'>Movement Match: Quiz</h1>
-        </div>
-        <div className='Quiz-body'>
-          {content}
-          <button className='Quiz-finish' onClick={this.onFinish}>
-            {this.state.finishButtonText}
-          </button>
-        </div>
+        {loading}
+        {content}
+        {finish}
       </div>
     );
   }

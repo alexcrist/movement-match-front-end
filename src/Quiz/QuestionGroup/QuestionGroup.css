@@ -1,6 +1,6 @@
 .QuestionGroup {
   margin-top: 36px;
-  box-shadow: 0px 3px 15px rgba(0,0,0,0.4);
+  box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
   border-radius: 2px;
 }
 
@@ -8,7 +8,7 @@
   font-size: 28px;
   color: #f5f5f5;
   padding: 8px 0 8px 36px;
-  border-radius: 2px 2px 2px 0;
+  border-radius: 2px;
 }
 
 .QuestionGroup-questions {
