@@ -1,4 +1,4 @@
-# Movement Match (Front End)
+# Movement Match (front end)
 
 > A React front end for the Movement Match project
 
