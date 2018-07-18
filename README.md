@@ -9,7 +9,6 @@
 - [🏗️ Project Structure](#-project-structure)
 - [📡 Interactions with Back End](#-interactions-with-back-end)
 - [⛲ Code Style](#-code-style)
-- [📝 License](#-license)
 
 ## 🐈 Website
 
@@ -146,7 +145,3 @@ An example of an array of **Results** can be found [here](./src/data/mockResults
 - Wrap lines at 80 characters
 - Component CSS class names always start with `Component-` to avoid collisions
 - Opt for descriptive variables names, intentional whitespace, and self-explanatory code over verbose comments
-
-## 📝 License
-
-[MIT](./LICENSE)
