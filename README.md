@@ -141,7 +141,7 @@ An example of a **Result** array can be found [here](./src/data/mockResults.js).
 
 ## ⛲ Code Style
 
-- Indentation: 2 spaces
-- Wrap lines at 80 characters
-- Component CSS class names always start with `Component-` to avoid collisions
+- Indentatations are two spaces
+- Lines are wrapped at 80 characters
+- CSS class names in a Component always start with `Component-` to avoid collisions
 - Opt for descriptive variables names, intentional whitespace, and self-explanatory code over verbose comments
