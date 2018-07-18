@@ -4,12 +4,12 @@
 
 ## 📚 Contents
 
-- [🐈 Website](#-website)
-- [🤲 Contributing](#-contributing)
+- [🐈  Website](#-website)
+- [🤲  Contributing](#-contributing)
 - [🏗️ Project Structure](#-project-structure)
-- [📡 Interactions with Back End](#-interactions-with-back-end)
-- [⛲ Code Style](#-code-style)
-- [📝 License](#-license)
+- [📡  Interactions with Back End](#-interactions-with-back-end)
+- [⛲  Code Style](#-code-style)
+- [📝  License](#-license)
 
 ## 🐈 Website
 
