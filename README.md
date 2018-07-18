@@ -72,7 +72,7 @@ If you have write access to this repository, you can deploy to GitHub pages with
 
 ## Interactions with Back End
 
-Currently all the back end interactions are mocked out. The front end expects all data to be passed via JSON. There are currently two mocked out interactions, [fetching groups of questions](#fetching-question-groups), and [processing the user's answers](#processing-the-users-answers).
+Currently all the back end interactions are mocked out. The front end expects all data to be passed via JSON. There are currently two mocked out interactions, [fetching groups of questions](#fetching-groups-of-questions), and [processing the user's answers](#processing-the-users-answers).
 
 ### Fetching groups of questions
 
