@@ -112,13 +112,13 @@ Array of QuestionGroups
 
 In english, each **QuestionGroup** has an ID, a title, and an array of **Questions**. Each **Question** also has an ID and a title, as well as an optional field `multipleChoice` which, when true, will allow the user to select multiple answers. Each **Question** also has an array of **Answers** which each have an ID and a title.
 
-An example of one of these **QuestionGroup** arrays can be found [here](./src/data/mockQuestions.js).
+An example of a **QuestionGroup** array can be found [here](./src/data/mockQuestions.js).
 
 ### Processing the users's answers
 
 When the user completes the quiz, they post an array of **AnswerGroups** back to the sever. An **AnswerGroup** is identical to a **QuestionGroup** except that there is an additional field `answer` on each question whose value is an array of the indices of the chosen answers.
 
-An example of on of these **AnswerGroup** arrays can be found [here](./src/data/mockAnswers.js).
+An example of an **AnswerGroup** array can be found [here](./src/data/mockAnswers.js).
 
 After posting to the back end, the front end will expect a JSON array of **Results** where each **Result** represents an activist movement as a response from the back end with the following schema:
 
@@ -137,7 +137,7 @@ Array of Results
 ]
 ```
 
-An example of an array of **Results** can be found [here](./src/data/mockResults.js).
+An example of a **Result** array can be found [here](./src/data/mockResults.js).
 
 ## ⛲ Code Style
 
