@@ -1,21 +1,21 @@
-# Movement Match Front End
+# 🔥 Movement Match Front End
 
 > A React front end for the Movement Match project
 
-## Contents
+## 📚 Contents
 
-- [Website](#website)
-- [Contributing](#contributing)
-- [Project Structure](#project-structure)
-- [Interactions with Back End](#interactions-with-back-end)
-- [Code Style](#code-style)
-- [License](#license)
+- [🐈 Website](#-website)
+- [🤲 Contributing](#-contributing)
+- [🏗️ Project Structure](#-project-structure)
+- [📡 Interactions with Back End](#-interactions-with-back-end)
+- [⛲ Code Style](#-code-style)
+- [📝 License](#-license)
 
-## Website
+## 🐈 Website
 
 https://alexcrist.github.io/movement-match-front-end/
 
-## Contributing
+## 🤲 Contributing
 
 ### Requirements
 
@@ -79,7 +79,7 @@ If you have write access to this repository, you can deploy to GitHub pages with
     └── index.js             Entry point
 ```
 
-## Interactions with Back End
+## 📡 Interactions with Back End
 
 Currently all the back end interactions are mocked out. The front end expects all data to be passed via JSON. There are currently two mocked out interactions, [fetching groups of questions](#fetching-groups-of-questions), and [processing the user's answers](#processing-the-userss-answers).
 
@@ -140,13 +140,13 @@ Array of Results
 
 An example of an array of **Results** can be found [here](./src/data/mockResults.js).
 
-## Code Style
+## ⛲ Code Style
 
 - Indentation: 2 spaces
 - Wrap lines at 80 characters
 - Component CSS class names always start with `Component-` to avoid collisions
 - Opt for descriptive variables names, intentional whitespace, and self-explanatory code over verbose comments
 
-## License
+## 📝 License
 
-MIT
+[MIT](./LICENSE)
