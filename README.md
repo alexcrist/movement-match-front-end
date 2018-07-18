@@ -72,13 +72,64 @@ If you have write access to this repository, you can deploy to GitHub pages with
 
 ## Interactions with back end
 
-Currently all the back end interactions are mocked out. The front end expects all data to be passed via JSON. There are currently two mocked out interactions, **fetching the question groups**, and **processing the user's answers**.
+Currently all the back end interactions are mocked out. The front end expects all data to be passed via JSON. There are currently two mocked out interactions, [fetching the question groups](#fetching-question-groups), and [processing the user's answers](#processing-the-users-answers).
 
 ### Fetching Question Groups
 
+The front end expects that it will recieve a **QuestionGroup** JSON array with the following schema:
+
+```
+Array of QuestionGroups
+
+[
+    {
+        groupId: Number,
+        title: String,
+        questions: [
+            {
+                questionId: Number,
+                title: String,
+                multipleChoice: Boolean (optional)
+                answers: [
+                    {
+                        answerId: Number,
+                        title: String
+                    }
+                ]
+            }
+        ]
+    }
+]
+```
+
+In english, each **QuestionGroup** has an ID, a title, and an array of **Questions**. Each **Question** also has an ID and a title, as well as an optional field `multipleChoice` which, when true, will allow the user to select multiple answers. Each **Question** also has an array of **Answers** which each have an ID and a title.
+
+An example of one of these **QuestionGroup** arrays can be found [here](./src/data/mockQuestions.js).
 
 ### Processing the Users's Answers
 
+When the user completes the quiz, they post an array of **AnswerGroups** back to the sever. An **AnswerGroup** is identical to a **QuestionGroup** except that there is an additional field `answer` on each question whose value is an array of the indices of the chosen answers.
+
+An example of on of these **AnswerGroup** arrays can be found [here](./src/data/mockAnswers.js).
+
+After posting to the back end, the front end will expect a JSON array of **Results** where each **Result** represents an activist movement as a response from the back end with the following schema:
+
+```
+Array of Results
+
+[
+    {
+        resultId: Number,
+        name: String,
+        description: String (optional),
+        websiteLink: String (url) (optional),
+        donateLink: String (url) (optional),
+        image: String (url) (optional)
+    }
+]
+```
+
+An example of an array of **Results** can be found [here](./src/data/mockResults.js).
 
 ## Code Style
 
