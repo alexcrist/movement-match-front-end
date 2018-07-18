@@ -1,7 +1,6 @@
 import React from 'react';
 import _ from 'lodash';
 import { Link, BrowserRouter, Route } from 'react-router-dom';
-import logo from '../assets/match.png';
 
 import ScrollToTop from '../util/ScrollToTop.js';
 
@@ -72,8 +71,6 @@ class App extends React.Component {
         />
       );
     });
-
-    console.log(routes);
 
     return <div className='App-body'>{routes}</div>;
   }
