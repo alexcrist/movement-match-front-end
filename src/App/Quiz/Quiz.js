@@ -3,20 +3,9 @@ import _ from 'lodash';
 import { Redirect } from 'react-router-dom';
 import update from 'immutability-helper';
 import QuestionGroup from './QuestionGroup/QuestionGroup.js';
-import questionGroups from '../data/mockQuestions.js';
-import results from '../data/mockResults.js';
+import questionGroups from '../../data/mockQuestions.js';
+import results from '../../data/mockResults.js';
 import './Quiz.css';
-
-const colors = [
-  '#311b92',
-  '#1a237e',
-  '#0d47a1',
-  '#01579b',
-  '#006064',
-  '#004d40',
-  '#1b5e20',
-  '#33691e'
-];
 
 class Quiz extends React.Component {
   constructor(props) {
@@ -59,7 +48,6 @@ class Quiz extends React.Component {
       answer = [answerIndex];
     }
 
-
     const questionGroups = update(this.state.questionGroups, {
       [groupIndex]: {
         questions: {
@@ -90,16 +78,16 @@ class Quiz extends React.Component {
     }
 
     const loading = !this.state.questionGroups && (
-      <div className='Quiz-loading'>Fetching questions...</div>
+      <div className='Quiz-loading subtitle card'>
+        Fetching questions...
+      </div>
     );
 
     const content = _.map(this.state.questionGroups, (questionGroup, index) => {
-      const color = colors[index % colors.length];
       return (
         <QuestionGroup
           key={index}
           groupIndex={index}
-          color={color}
           setAnswer={this.setAnswer}
           {...questionGroup}
         />
@@ -107,9 +95,13 @@ class Quiz extends React.Component {
     });
 
     const finish = this.state.questionGroups && (
-      <button className='Quiz-finish button' onClick={this.onFinish}>
-        {this.state.finishButtonText}
-      </button>
+      <div className='invisible-card'>
+        <button
+          className='Quiz-finish button'
+          onClick={this.onFinish}>
+          {this.state.finishButtonText}
+        </button>
+      </div>
     );
 
     return (

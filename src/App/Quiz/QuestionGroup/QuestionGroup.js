@@ -12,28 +12,15 @@ export default class QuestionGroup extends React.Component {
           questionIndex={index}
           groupIndex={this.props.groupIndex}
           index={index + 1}
-          color={this.props.color}
           setAnswer={this.props.setAnswer}
           {...question}        />
       );
     });
 
-    const titleStyle = {
-      backgroundColor: this.props.color
-    };
-    const borderStyle = {
-      borderColor: this.props.color
-    };
-
     return (
-      <div className='QuestionGroup'>
-        <div className='QuestionGroup-header'>
-          <h2 className='QuestionGroup-title' style={titleStyle}>
-            {this.props.title}
-          </h2>
-        </div>
+      <div className='QuestionGroup card'>
+        <h2 className='QuestionGroup-title subtitle'>{this.props.title}</h2>
         <div className='QuestionGroup-questions'>
-          <div className='QuestionGroup-border' style={borderStyle}/>
           {questions}
         </div>
       </div>

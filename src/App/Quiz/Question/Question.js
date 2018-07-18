@@ -26,7 +26,7 @@ export default class Question extends React.Component {
 
     return (
       <div className='Question'>
-        <div className='Question-title' style={questionStyle}>
+        <div className='Question-title text' style={questionStyle}>
           {this.props.index}. {this.props.title}
         </div>
         <div className='Question-answers'>

@@ -1,0 +1,38 @@
+.Result-title.subtitle {
+  display: block;
+  padding-bottom: 18px;
+}
+
+.Result-title:hover {
+  text-decoration: underline;
+}
+
+.Result-link {
+  margin-top: 6px;
+  margin-right: 18px;
+  margin-bottom: 18px;
+}
+
+.Result-link h3 {
+  font-size: 28px;
+  line-height: 28px;
+}
+
+.Result-link-website {
+  background-color: #ab47bc;
+}
+
+.Result-link-donate {
+  background-color: #790e8b;
+}
+
+.Result-description {
+  padding-bottom: 18px;
+}
+
+.Result-image {
+  width: 100%;
+  margin-top: 6px;
+  margin-bottom: 18px;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+}

@@ -15,14 +15,7 @@ class Results extends React.Component {
     const results = _.map(this.results, (result, index) => {
       return <Result key={index} {...result} />;
     });
-
-    return (
-      <div className='Results'>
-        <div className='Results-body'>
-          {results}
-        </div>
-      </div>
-    );
+    return <div className='Results'>{results}</div>;
   }
 }
 

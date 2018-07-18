@@ -19,13 +19,16 @@ class Home extends React.Component {
 
     return (
       <div className='Home'>
-        <div className='Home-body'>
-          <h2 className='Home-subtitle'>Mission</h2>
-          <div className='Home-description'>{text1}</div>
-          <h2 className='Home-subtitle'>Movements</h2>
-          <div className='Home-description'>{text2}</div>
-          <h2 className='Home-subtitle'>Action</h2>
-          <div className='Home-description'>{text3}</div>
+        <div className='Home-body card'>
+          <h2 className='Home-subtitle subtitle'>Mission</h2>
+          <div className='Home-description text'>{text1}</div>
+
+          <h2 className='Home-subtitle subtitle'>Movements</h2>
+          <div className='Home-description text'>{text2}</div>
+
+          <h2 className='Home-subtitle subtitle'>Action</h2>
+          <div className='Home-description text'>{text3}</div>
+
           <Link className='button Home-link Home-link-quiz' to='/quiz'>
             Take the Quiz
           </Link>

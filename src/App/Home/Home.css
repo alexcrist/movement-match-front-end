@@ -1,0 +1,25 @@
+.Home {
+  background-image: url('../../assets/movement.jpg');
+  background-position-y: -200px;
+}
+
+.Home-description {
+  padding-bottom: 36px;
+}
+
+.Home-link {
+  margin-right: 18px;
+  margin-bottom: 18px;
+}
+
+.Home-link:hover {
+  opacity: 0.8;
+}
+
+.Home-link-quiz {
+  background-color: #ab47bc;
+}
+
+.Home-link-results {
+  background-color: #790e8b;
+}

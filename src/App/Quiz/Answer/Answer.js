@@ -30,7 +30,7 @@ export default class Answer extends React.Component {
           onChange={this.onChange}
         />
         <label
-          className='Answer-title'
+          className='text'
           htmlFor={title}>
           {title}
         </label>
