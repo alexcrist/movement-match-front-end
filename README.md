@@ -56,7 +56,7 @@ If you have write access to this repository, you can deploy to GitHub pages with
 
 - `yarn run deploy`
 
-## Project Structure
+## 🏗️ Project Structure
 
 ```
 ├── public/
